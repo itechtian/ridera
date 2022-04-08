@@ -196,8 +196,8 @@
             background: #ffb100 !important;
             color: #000 !important;
             border: solid 1px #d0d2d4 !important;
-             min-height: 45px;
-          /* padding: 10px 35px;  */
+            min-height: 45px;
+            /* padding: 10px 35px;  */
             border-radius: 2px;
             margin: 1%;
             text-transform: uppercase;
@@ -339,44 +339,43 @@
                         <div class="r m-1 p-3">
                             <div class="basic-input m-1">
                                 <div class="d-flex">
-                                <div class="form-group mb-2 m-1">
-                                    <label>Moving from</label>
-                                    <input type="text" class="form-control w-100" 
-                                        placeholder="ex. lekki phase1" id="movingfrom">
+                                    <div class="form-group mb-2 m-1">
+                                        <label>Moving from</label>
+                                        <input type="text" class="form-control w-100" placeholder="ex. lekki phase1"
+                                            id="movingfrom">
+                                    </div>
+                                    <div class="form-group w-100 mb-2 m-1">
+                                        <label>Floor Pickup</label>
+                                        <select class="form-control" id="floorpickup">
+                                            <option>Ground floor</option>
+                                            <option>First floor</option>
+                                            <option>Second floor</option>
+                                            <option>Third floor</option>
+                                            <option>Fourth floor and above</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group w-100 mb-2 m-1">
-                                    <label>Floor Pickup</label>
-                                    <select class="form-control"  id="floorpickup">
-                                        <option>Ground floor</option>
-                                        <option>First floor</option>
-                                        <option>Second floor</option>
-                                        <option>Third floor</option>
-                                        <option>Fourth floor and above</option>
-                                    </select>
+                                <div class="d-flex">
+                                    <div class="form-group mb-2 m-1">
+                                        <label>Moving to</label>
+                                        <input type="text" class="form-control" placeholder="ex. Ajah" id="movingto">
+                                    </div>
+                                    <div class="form-group w-100 mb-2 m-1">
+                                        <label>Floor Drop off</label>
+                                        <select class="form-control" id="floordropoff">
+                                            <option>Ground floor</option>
+                                            <option>First floor</option>
+                                            <option>Second floor</option>
+                                            <option>Third floor</option>
+                                            <option>Fourth floor and above</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="form-group mb-2 m-1">
-                                    <label>Moving to</label>
-                                    <input type="text" class="form-control" placeholder="ex. Ajah"
-                                        id="movingto">
-                                </div>
-                                <div class="form-group w-100 mb-2 m-1">
-                                    <label>Floor Drop off</label>
-                                    <select class="form-control"  id="floordropoff">
-                                        <option>Ground floor</option>
-                                        <option>First floor</option>
-                                        <option>Second floor</option>
-                                        <option>Third floor</option>
-                                        <option>Fourth floor and above</option>
-                                    </select>
-                                </div>
-                            </div>
                             </div>
                             <div class="basic-input m-1">
                                 <div class="form-group mb-2">
                                     <label>Move Type</label>
-                                    <select class="form-control"  id="movingtype">
+                                    <select class="form-control" id="movingtype">
                                         <option>Home</option>
                                         <option>Office</option>
                                         <option>Commercial</option>
@@ -385,12 +384,12 @@
 
                                 <div class="form-group mb-2">
                                     <label>Moving Date</label>
-                                    <input type="date" class="form-control" 
-                                        placeholder="name@example.com" id="movingdate">
+                                    <input type="date" class="form-control" placeholder="name@example.com"
+                                        id="movingdate">
                                 </div>
                                 <div class="form-group mb-2">
                                     <label>Size of Move <span>*</span></label>
-                                    <select class="form-control"  id="size">
+                                    <select class="form-control" id="size">
                                         <option>A room self contained</option>
                                         <option>One bedroom</option>
                                         <option>Two bedroom</option>
@@ -407,24 +406,23 @@
                                 <div class="form-group mb-2">
 
                                     <label>Full Name</label>
-                                    <input type="text" class="form-control" placeholder="full name"
-                                        id="fullname">
+                                    <input type="text" class="form-control" placeholder="full name" id="fullname">
                                 </div>
                             </div>
                             <div class="basic-input m-1">
                                 <div class="d-flex">
 
-                                <div class="form-group mb-2 m-1">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control w-100" 
-                                        placeholder="name@example.com" id="email">
-                                </div>
-                                <div class="form-group m-1">
+                                    <div class="form-group mb-2 m-1">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control w-100" placeholder="name@example.com"
+                                            id="email">
+                                    </div>
+                                    <div class="form-group m-1">
 
-                                    <label>Phone number</label>
-                                    <input type="tel" class="form-control w-100" 
-                                        placeholder="phone number" id="phonenumber">
-                                </div>
+                                        <label>Phone number</label>
+                                        <input type="tel" class="form-control w-100" placeholder="phone number"
+                                            id="phonenumber">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -432,19 +430,21 @@
                     <div class="footerc area m-1">
                         <span class="">By clicking submit you agree to our <a href="/termsandcondition.html"
                                 class="text-white" style="text-decoration: underline;">Terms Of Service</a>.</span>
-                        <button class="button01" type="submit">Submit</button>
-                    </form>
+                        <button class="button01" type="submit" id="btn">Submit</button>
+                </form>
 
-                      
-                    </div>
-                    <div class="text-center m-1 p-1">
-                        <span>OR</span>
-                    </div>
-                    <div class="text-center m-2">
-                        <a href="https://wa.me/+2349049929256?text=Hi, i want to request a video survey for my move. thank you."> <button class="button02" type="button">Request a video call survey </button></a>
-                     </div>
+
+            </div>
+            <div class="text-center m-1 p-1">
+                <span>OR</span>
+            </div>
+            <div class="text-center m-2">
+                <a
+                    href="https://wa.me/+2348142223841?text=Hi, i want to request a video survey for my move. thank you.">
+                    <button class="button02" type="button">Request a video call survey </button></a>
             </div>
         </div>
+    </div>
     </div>
 
     <section class="section2"></section>
@@ -549,8 +549,7 @@
                                 properties, that’s why we provide you with a safe, reliable and swift home moving
                                 solutions.
                             </p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                    More</span></a>
+                            <a class="btn-slide mt-2" href="#form"><i class="fa fa-arrow-right"></i><span>Request qoute</span></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" id="h">
@@ -565,8 +564,8 @@
                                 handle
                                 the tedious processes involved.
                             </p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                    More</span></a>
+                            <a class="btn-slide mt-2" href="#form"><i class="fa fa-arrow-right"></i><span>Request 
+                                    Quote</span></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s" id="f">
@@ -578,8 +577,8 @@
                             <p> With our well equipped trucks & vans stationed at numerous locations, we handle the
                                 transportation and moving of your goods excellently.
                                 We also deliver your goods early and in good condition to your clients.</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                    More</span></a>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Request
+                                    Quote</span></a>
                         </div>
                     </div>
                 </div>
@@ -1065,7 +1064,8 @@
 
     <!-- whatsapp logo -->
     <div class="whatsapp">
-        <a href="https://wa.me/09049929256?text=Hi, i want to learn more about ridera. thank you."><img src="https://logos-world.net/wp-content/uploads/2020/05/WhatsApp-Logo.png"
+        <a href="https://wa.me/+2348142223841?text=Hi, i want to learn more about ridera. thank you."><img
+                src="https://logos-world.net/wp-content/uploads/2020/05/WhatsApp-Logo.png"
                 class="animate__animated animate__heartBeat animate__infinite	infinite" width="70px"></a>
     </div>
 
@@ -1099,27 +1099,29 @@
           var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
       </script> -->
-      <script>
+    <script>
         let form = document.getElementById('form')
-        form.addEventListener('submit',(e)=>{
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            let name = document.getElementById('fullname').value
-            let email = document.getElementById('email').value
-            let phonenumber = document.getElementById('phonenumber').value
-            let movingfrom = document.getElementById('movingfrom').value
-            let floorpickup = document.getElementById('floorpickup').value
-            let movingto = document.getElementById('movingto').value
-            let floordropoff= document.getElementById('floordropoff').value
-            let movingtype = document.getElementById('movingtype').value
-            let movingdate = document.getElementById('movingdate').value
-            let size = document.getElementById('size').value
-            let payload = `Hi my name is ${name}, my email ${email} and number ${phonenumber} 
-                            am moving from ${movingfrom}, ${floorpickup}, to ${movingto}, ${floordropoff}, on ${movingdate}
-                            type ${movingtype}, ${size}`
-            window.location = ` https://wa.me/+2349049929256?text=${payload}`
-            
+            document.getElementById('btn').innerHTML = "working"
+            setTimeout(() => {
+                let name = document.getElementById('fullname').value
+                let email = document.getElementById('email').value
+                let phonenumber = document.getElementById('phonenumber').value
+                let movingfrom = document.getElementById('movingfrom').value
+                let floorpickup = document.getElementById('floorpickup').value
+                let movingto = document.getElementById('movingto').value
+                let floordropoff = document.getElementById('floordropoff').value
+                let movingtype = document.getElementById('movingtype').value
+                let movingdate = document.getElementById('movingdate').value
+                let size = document.getElementById('size').value
+                let payload = `Hi my name is ${name}, my email ${email} and number ${phonenumber} am moving from ${movingfrom}, ${floorpickup}, to ${movingto}, ${floordropoff}, on ${movingdate} type ${movingtype}, ${size}`
+                window.location = ` https://wa.me/+2348142223841?text=${payload}`
+            },1000)
+            document.getElementById('btn').innerHTML = "Sumbit"
+
         })
-    
+
     </script>
 </body>
 
