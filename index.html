@@ -192,13 +192,13 @@
         }
 
         .button01 {
-            width: 100%;
+            width: 90%;
             background: #ffb100 !important;
             color: #000 !important;
             border: solid 1px #d0d2d4 !important;
             min-height: 45px;
             /* padding: 10px 35px;  */
-            border-radius: 2px;
+            border-radius: 6px;
             margin: 1%;
             text-transform: uppercase;
             transition: all 100ms ease-out;
@@ -223,14 +223,14 @@
         }
 
         .button02 {
-            width: 100%;
+            width: 90%;
             background: #f7f7f7 !important;
             color: rgb(11, 97, 211) !important;
             border: solid 1px #d0d2d4 !important;
             /* min-height: 45px;
           padding: 10px 35px; */
             margin: 1%;
-            border-radius: 2px;
+            border-radius: 6px;
             padding: 2%;
             /* text-transform: uppercase; */
             transition: all 100ms ease-out;
@@ -292,14 +292,14 @@
             }
 
             .button01 {
-                width: 100%;
+                width: 90%;
                 background: #ffb100 !important;
                 color: #FFFF !important;
                 border: solid 1px #d0d2d4 !important;
                 /* min-height: 45px;
           padding: 10px 35px; */
                 margin: 1%;
-                border-radius: 2px;
+                border-radius: 6px;
                 padding: 2%;
                 text-transform: uppercase;
                 transition: all 100ms ease-out;
@@ -309,14 +309,14 @@
             }
 
             .button02 {
-                width: 100%;
+                width: 90%;
                 background: #f7f7f7 !important;
                 color: rgb(11, 97, 211) !important;
                 border: solid 1px #d0d2d4 !important;
                 /* min-height: 45px;
           padding: 10px 35px; */
                 margin: 1%;
-                border-radius: 2px;
+                border-radius: 6px;
                 padding: 2%;
                 /* text-transform: uppercase; */
                 transition: all 100ms ease-out;
@@ -342,11 +342,20 @@
                                     <div class="form-group mb-2 m-1">
                                         <label>Moving from</label>
                                         <input type="text" class="form-control w-100" placeholder="ex. lekki phase1"
-                                            id="movingfrom">
+                                            id="movingfrom" required>
                                     </div>
+                                    <div class="form-group mb-2 m-1">
+                                        <label>Moving to</label>
+                                        <input type="text" class="form-control" placeholder="ex. Ajah" id="movingto"
+                                            required>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex">
+
                                     <div class="form-group w-100 mb-2 m-1">
-                                        <label>Floor Pickup</label>
-                                        <select class="form-control" id="floorpickup">
+                                        <label>Floor Pickup<span>*</span></label>
+                                        <select class="form-control" id="floorpickup" required>
                                             <option>Ground floor</option>
                                             <option>First floor</option>
                                             <option>Second floor</option>
@@ -354,15 +363,9 @@
                                             <option>Fourth floor and above</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="form-group mb-2 m-1">
-                                        <label>Moving to</label>
-                                        <input type="text" class="form-control" placeholder="ex. Ajah" id="movingto">
-                                    </div>
                                     <div class="form-group w-100 mb-2 m-1">
-                                        <label>Floor Drop off</label>
-                                        <select class="form-control" id="floordropoff">
+                                        <label>Floor Dropoff<span>*</span></label>
+                                        <select class="form-control" id="floordropoff" required>
                                             <option>Ground floor</option>
                                             <option>First floor</option>
                                             <option>Second floor</option>
@@ -375,21 +378,15 @@
                             <div class="basic-input m-1">
                                 <div class="form-group mb-2">
                                     <label>Move Type</label>
-                                    <select class="form-control" id="movingtype">
+                                    <select class="form-control" id="movingtype" required>
                                         <option>Home</option>
                                         <option>Office</option>
                                         <option>Commercial</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group mb-2">
-                                    <label>Moving Date</label>
-                                    <input type="date" class="form-control" placeholder="name@example.com"
-                                        id="movingdate">
-                                </div>
                                 <div class="form-group mb-2">
                                     <label>Size of Move <span>*</span></label>
-                                    <select class="form-control" id="size">
+                                    <select class="form-control" id="size" required>
                                         <option>A room self contained</option>
                                         <option>One bedroom</option>
                                         <option>Two bedroom</option>
@@ -399,6 +396,12 @@
 
                                     </select>
                                 </div>
+                                <div class="form-group mb-2">
+                                    <label>Moving Date</label>
+                                    <input type="date" class="form-control" placeholder="name@example.com"
+                                        id="movingdate" required style="width: 100% !important;">
+                                </div>
+                               
                             </div>
                         </div>
                         <div class="r m-1 p-3">
@@ -406,7 +409,8 @@
                                 <div class="form-group mb-2">
 
                                     <label>Full Name</label>
-                                    <input type="text" class="form-control" placeholder="full name" id="fullname">
+                                    <input type="text" class="form-control" placeholder="full name" id="fullname"
+                                        required>
                                 </div>
                             </div>
                             <div class="basic-input m-1">
@@ -414,14 +418,14 @@
 
                                     <div class="form-group mb-2 m-1">
                                         <label>Email</label>
-                                        <input type="email" class="form-control w-100" placeholder="name@example.com"
-                                            id="email">
+                                        <input type="email" class="form-control" placeholder="name@example.com"
+                                            id="email" required>
                                     </div>
                                     <div class="form-group m-1">
 
                                         <label>Phone number</label>
-                                        <input type="tel" class="form-control w-100" placeholder="phone number"
-                                            id="phonenumber">
+                                        <input type="tel" class="form-control" placeholder="phone number"
+                                            id="phonenumber" required>
                                     </div>
                                 </div>
                             </div>
@@ -430,7 +434,7 @@
                     <div class="footerc area m-1">
                         <span class="">By clicking submit you agree to our <a href="/termsandcondition.html"
                                 class="text-white" style="text-decoration: underline;">Terms Of Service</a>.</span>
-                        <button class="button01" type="submit" id="btn">Submit</button>
+                        <button class="button01" type="submit" id="btn"></button>
                 </form>
 
 
@@ -549,7 +553,8 @@
                                 properties, that’s why we provide you with a safe, reliable and swift home moving
                                 solutions.
                             </p>
-                            <a class="btn-slide mt-2" href="#form"><i class="fa fa-arrow-right"></i><span>Request qoute</span></a>
+                            <a class="btn-slide mt-2" href="#form"><i class="fa fa-arrow-right"></i><span>Request
+                                    qoute</span></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" id="h">
@@ -564,7 +569,7 @@
                                 handle
                                 the tedious processes involved.
                             </p>
-                            <a class="btn-slide mt-2" href="#form"><i class="fa fa-arrow-right"></i><span>Request 
+                            <a class="btn-slide mt-2" href="#form"><i class="fa fa-arrow-right"></i><span>Request
                                     Quote</span></a>
                         </div>
                     </div>
@@ -1100,10 +1105,13 @@
         })();
       </script> -->
     <script>
+        document.getElementById('btn').innerHTML = "Submit"
+
         let form = document.getElementById('form')
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            document.getElementById('btn').innerHTML = "working"
+            document.getElementById('btn').innerHTML = "working..."
+            document.getElementById('btn').disable = true
             setTimeout(() => {
                 let name = document.getElementById('fullname').value
                 let email = document.getElementById('email').value
@@ -1117,8 +1125,8 @@
                 let size = document.getElementById('size').value
                 let payload = `Hi my name is ${name}, my email ${email} and number ${phonenumber} am moving from ${movingfrom}, ${floorpickup}, to ${movingto}, ${floordropoff}, on ${movingdate} type ${movingtype}, ${size}`
                 window.location = ` https://wa.me/+2348142223841?text=${payload}`
-            },1000)
-            document.getElementById('btn').innerHTML = "Sumbit"
+                document.getElementById('btn').innerHTML = "Sumbited"
+            }, 1500)
 
         })
 
