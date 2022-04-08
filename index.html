@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Favicon -->
     <link href="img/logo3.png" rel="icon">
@@ -46,7 +47,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
-        <a href="index.html" class="navbar-brand  d-flex align-items-center px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand  d-flex align-items-center  px-lg-5">
             <!-- <h2 class="mb-2 text-white">Logistica</h2> -->
             <img src="./img/logo3.png" width="200" />
         </a>
@@ -71,7 +72,7 @@
                 </div> -->
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+012 345 6789
+            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>08142223841
             </h4>
         </div>
     </nav>
@@ -191,13 +192,14 @@
         }
 
         .button01 {
-            width: 20%;
+            width: 100%;
             background: #ffb100 !important;
             color: #000 !important;
             border: solid 1px #d0d2d4 !important;
-            /* min-height: 45px;
-          padding: 10px 35px; */
+             min-height: 45px;
+          /* padding: 10px 35px;  */
             border-radius: 2px;
+            margin: 1%;
             text-transform: uppercase;
             transition: all 100ms ease-out;
             font-size: 1em;
@@ -206,7 +208,7 @@
         }
 
         .area span {
-            width: 40%;
+            width: 100%;
             background-color: transparent !important;
 
 
@@ -215,7 +217,9 @@
         .footerc {
             display: flex;
             font-size: 12px;
-            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
 
         .button02 {
@@ -247,19 +251,20 @@
                 width: 100%;
                 flex-direction: column;
             }
+
             .section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            transform: translateY(-15%);
-            z-index: 100 !important;
-            position: absolute;
-        }
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                transform: translateY(-15%);
+                z-index: 100 !important;
+                position: absolute;
+            }
 
 
             .section2 {
                 width: 100%;
-                height: 130vh;
+                height: 115vh;
                 justify-content: center;
                 z-index: 100 !important;
             }
@@ -325,37 +330,23 @@
     </style>
 
 
-    <div class="section">
+    <div class="section" id="q">
         <div class="form-wrap">
             <div class="main-form">
-                <form>
+                <form id="form" method="POST">
                     <h3 class="text-center text-white m-1 px-3 py-3">Request a FREE Moving Quote Today!!</h3>
                     <div class="input-area01">
                         <div class="r m-1 p-3">
                             <div class="basic-input m-1">
-                                <div class="form-group mb-2">
+                                <div class="d-flex">
+                                <div class="form-group mb-2 m-1">
                                     <label>Moving from</label>
-                                    <input type="text" class="form-control" id="floatingInput"
-                                        placeholder="ex. lekki phase1" name="movingfrom">
+                                    <input type="text" class="form-control w-100" 
+                                        placeholder="ex. lekki phase1" id="movingfrom">
                                 </div>
-                                <div class="form-group w-50 mb-2">
-                                    <label>Floor Pickup <span>*</span></label>
-                                    <select class="form-control" id="exampleFormControlSelect1" name="floorpickup">
-                                        <option>Ground floor</option>
-                                        <option>First floor</option>
-                                        <option>Second floor</option>
-                                        <option>Third floor</option>
-                                        <option>Fourth floor and above</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-2">
-                                    <label>Moving to</label>
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="ex. Ajah"
-                                        name="movingto">
-                                </div>
-                                <div class="form-group w-50 mb-2">
-                                    <label>Floor Drop off <span>*</span></label>
-                                    <select class="form-control" id="exampleFormControlSelect1" name="floordropoff">
+                                <div class="form-group w-100 mb-2 m-1">
+                                    <label>Floor Pickup</label>
+                                    <select class="form-control"  id="floorpickup">
                                         <option>Ground floor</option>
                                         <option>First floor</option>
                                         <option>Second floor</option>
@@ -364,10 +355,28 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="d-flex">
+                                <div class="form-group mb-2 m-1">
+                                    <label>Moving to</label>
+                                    <input type="text" class="form-control" placeholder="ex. Ajah"
+                                        id="movingto">
+                                </div>
+                                <div class="form-group w-100 mb-2 m-1">
+                                    <label>Floor Drop off</label>
+                                    <select class="form-control"  id="floordropoff">
+                                        <option>Ground floor</option>
+                                        <option>First floor</option>
+                                        <option>Second floor</option>
+                                        <option>Third floor</option>
+                                        <option>Fourth floor and above</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
                             <div class="basic-input m-1">
                                 <div class="form-group mb-2">
                                     <label>Move Type</label>
-                                    <select class="form-control" id="exampleFormControlSelect1" name="movingtype">
+                                    <select class="form-control"  id="movingtype">
                                         <option>Home</option>
                                         <option>Office</option>
                                         <option>Commercial</option>
@@ -376,12 +385,12 @@
 
                                 <div class="form-group mb-2">
                                     <label>Moving Date</label>
-                                    <input type="date" class="form-control" id="floatingInput"
-                                        placeholder="name@example.com" name="movingdate">
+                                    <input type="date" class="form-control" 
+                                        placeholder="name@example.com" id="movingdate">
                                 </div>
                                 <div class="form-group mb-2">
                                     <label>Size of Move <span>*</span></label>
-                                    <select class="form-control" id="exampleFormControlSelect1" name="floordropoff">
+                                    <select class="form-control"  id="size">
                                         <option>A room self contained</option>
                                         <option>One bedroom</option>
                                         <option>Two bedroom</option>
@@ -398,37 +407,42 @@
                                 <div class="form-group mb-2">
 
                                     <label>Full Name</label>
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="full name"
-                                        name="fullname">
+                                    <input type="text" class="form-control" placeholder="full name"
+                                        id="fullname">
                                 </div>
                             </div>
                             <div class="basic-input m-1">
-                                <div class="form-group mb-2">
+                                <div class="d-flex">
+
+                                <div class="form-group mb-2 m-1">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" id="floatingInput"
-                                        placeholder="name@example.com" name="email">
+                                    <input type="email" class="form-control w-100" 
+                                        placeholder="name@example.com" id="email">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group m-1">
 
                                     <label>Phone number</label>
-                                    <input type="tel" class="form-control" id="floatingPassword"
-                                        placeholder="phone number" name="phonenumber">
+                                    <input type="tel" class="form-control w-100" 
+                                        placeholder="phone number" id="phonenumber">
+                                </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="footerc area m-1">
-                        <span class="">By clicking submit you agree to our <a href="" class="text-white"
-                                style="text-decoration: underline;">Terms Of Service</a>.</span>
-                        <button class="button01">Submit</button>
-                        <!-- <div class="text-center m-1 p-1">
-                            <span>OR</span>
-                        </div> -->
-                        <div class="text-center">
-                            <button class="button02">Request free video move survey</button>
-                        </div>
+                        <span class="">By clicking submit you agree to our <a href="/termsandcondition.html"
+                                class="text-white" style="text-decoration: underline;">Terms Of Service</a>.</span>
+                        <button class="button01" type="submit">Submit</button>
+                    </form>
+
+                      
                     </div>
-                </form>
+                    <div class="text-center m-1 p-1">
+                        <span>OR</span>
+                    </div>
+                    <div class="text-center m-2">
+                        <a href="https://wa.me/09049929256?text=Hi, i want to request a video survey for my move. thank you."> <button class="button02" type="button">Request a video call survey </button></a>
+                     </div>
             </div>
         </div>
     </div>
@@ -517,7 +531,7 @@
 
 
     <!-- Service Start -->
-    <section>
+    <section id="g">
         <div class="container-xxl  mt-0">
             <div class="">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -539,7 +553,7 @@
                                     More</span></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" id="h">
                         <div class="service-item p-4">
                             <div class="overflow-hidden mb-4">
                                 <img class="img-fluid" src="img/c.jpg" alt="">
@@ -555,7 +569,7 @@
                                     More</span></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s" id="f">
                         <div class="service-item p-4">
                             <div class="overflow-hidden mb-4">
                                 <img class="img-fluid" src="img/b.jpg" alt="">
@@ -576,9 +590,9 @@
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
-                        <p class="mb-5">Movement is part of our lifestyle. At
-                            some points in our lives we have move. Ridera logistics offers you a safe, swift and
-                            reliable moving services.
+                        <p class="mb-5">Ridera logistics is now in every neighborhood. With several available trucks and
+                            Vans, we now cover all the LGA's in Lagos,
+                            taking care of several moving daily and relieving more people of the stress of moving.
                         </p>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
@@ -986,15 +1000,15 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Home Relocation</a>
-                    <a class="btn btn-link" href="">Office & Commercial Move</a>
-                    <a class="btn btn-link" href="">Haulage Services:</a>
+                    <a class="btn btn-link" href="#g">Home Relocation</a>
+                    <a class="btn btn-link" href="#h">Office & Commercial Move</a>
+                    <a class="btn btn-link" href="#f">Haulage Services:</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
                     <a class="btn btn-link" href="">About Us</a>
                     <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="./termsandcondition.html">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
                 <!-- <div class="col-lg-3 col-md-6">
@@ -1021,9 +1035,44 @@
     </div>
     <!-- Footer End -->
 
+    <style>
+        .whatsapp {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            z-index: 9999;
+            background: #dad6d6;
+            border-radius: 360px;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        @media (max-width:999px) {
+            .whatsapp {
+                bottom: 30px;
+                right: 30px;
+                width: 70px;
+                height: 70px;
+            }
+
+        }
+    </style>
+
+    <!-- whatsapp logo -->
+    <div class="whatsapp">
+        <a href="https://wa.me/09049929256?text=Hi, i want to learn more about ridera. thank you."><img src="https://logos-world.net/wp-content/uploads/2020/05/WhatsApp-Logo.png"
+                class="animate__animated animate__heartBeat animate__infinite	infinite" width="70px"></a>
+    </div>
+
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" style="left: 10px;"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -1037,6 +1086,41 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- <script type="text/javascript">
+        (function () {
+          var options = {
+            whatsapp: "+2349049929245", // WhatsApp number
+            // call_to_action: "need more info? Message Us.", // Call to action
+            position: "right", // Position may be 'right' or 'left'
+          };
+          var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+          s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+      </script> -->
+      <script>
+        let form = document.getElementById('form')
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let name = document.getElementById('fullname').value
+            let email = document.getElementById('email').value
+            let phonenumber = document.getElementById('phonenumber').value
+            let movingfrom = document.getElementById('movingfrom').value
+            let floorpickup = document.getElementById('floorpickup').value
+            let movingto = document.getElementById('movingto').value
+            let floordropoff= document.getElementById('floordropoff').value
+            let movingtype = document.getElementById('movingtype').value
+            let movingdate = document.getElementById('movingdate').value
+            let size = document.getElementById('size').value
+            let payload = `Hi my name is ${name}, my email ${email} and number ${phonenumber} 
+                            am moving from ${movingfrom}, ${floorpickup}, to ${movingto}, ${floordropoff}, on ${movingdate}
+                            type ${movingtype}, ${size}`
+            window.location = ` https://wa.me/09049929256?text=${payload}`
+            
+        })
+    
+    </script>
 </body>
 
 </html>
