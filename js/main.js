@@ -112,3 +112,29 @@
     
 })(jQuery);
 
+
+document.getElementById('btn').innerHTML = "Submit"
+
+let form = document.getElementById('form')
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('btn').innerHTML = "working..."
+    document.getElementById('btn').disable = true
+    setTimeout(() => {
+        let name = document.getElementById('fullname').value
+        let email = document.getElementById('email').value
+        let phonenumber = document.getElementById('phonenumber').value
+        let movingfrom = document.getElementById('movingfrom').value
+        let floorpickup = document.getElementById('floorpickup').value
+        let movingto = document.getElementById('movingto').value
+        let floordropoff = document.getElementById('floordropoff').value
+        let movingtype = document.getElementById('movingtype').value
+        let movingdate = document.getElementById('movingdate').value
+        let size = document.getElementById('size').value
+        let payload = `Hi my name is ${name}, my email ${email} and number ${phonenumber} am moving from ${movingfrom}, ${floorpickup}, to ${movingto}, ${floordropoff}, on ${movingdate} type ${movingtype}, ${size}`
+        window.location = ` https://wa.me/+2348142223841?text=${payload}`
+        document.getElementById('btn').innerHTML = "Sumbited"
+    }, 1500)
+
+})
+
